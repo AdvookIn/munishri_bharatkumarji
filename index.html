@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MuniShri Bharatkumarji</title>
-    <meta name="author" content="Chirag Jain Betala">
+    <meta name="author" content="Derek Eder">
     <meta content="MuniShri Bharatkumarji | मुनिश्री भरतकुमारजी ">
 
     <!-- Bootstrap core CSS -->
@@ -22,26 +23,6 @@
                                 <div id="table-container"></div>
             </div>
         </main>
-
-        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" data-dismiss="modal">
-    <div class="modal-content"  >              
-      <div class="modal-body">
-      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <img src="" class="imagepreview" style="width: 100%;" >
-      </div> 
-      <div class="modal-footer">
-          <div class="col-xs-12">
-               
-          </div>
-
-      </div>
-          
-          
-    </div>
-  </div>
-</div>
-        
         <footer class="row">
             <div class="col">
                 <hr>
@@ -59,10 +40,7 @@
     <script>
         function format_link(link) {
             if (link)
-                //return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-                return "<a href='#' class='pop'>
-    <img src='" + link + "' style='width: 40px; height: 40px;' class='img-responsive'>
-</a>";
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
             else return "";
         }
 
@@ -76,26 +54,11 @@
             },
             datatables_options: {
                 paging: true,
-                layout: {
-        topEnd: {
-            search: {
-                processing: true,
-                placeholder: 'Search here...'
-            }
-        }
-    }
             },
             custom_formatting: [
                 [2, format_link]
             ]
         });
-
-        $(function() {
-		$('.pop').on('click', function() {
-			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
-			$('#imagemodal').modal('show');   
-		});		
-});
     </script>
 </body>
 
