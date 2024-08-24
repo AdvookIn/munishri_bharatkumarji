@@ -52,7 +52,14 @@
                 delimiter: '"'
             },
             datatables_options: {
-                paging: false
+                paging: true,
+                layout: {
+        topEnd: {
+            search: {
+                processing: true
+            }
+        }
+    }
             },
             custom_formatting: [
                 [4, format_link]
