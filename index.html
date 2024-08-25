@@ -92,9 +92,9 @@
 <script>
 		$('#table-container').on('click', ".pop", function() {
 			$('#imagemodal').modal('show');
-		        $('.imagepreview').attr('src', $(this).find('img').attr('src')); 
-			$('.imgdownload').attr('href', $(this).find('img').attr('src')); 
-			$('.imgdownload').attr('download', $(this).find('img').attr('src')); 
+		        $('.imagepreview').attr('src', $(this).find('object').attr('data')); 
+			$('.imgdownload').attr('href', $(this).find('object').attr('data')); 
+			$('.imgdownload').attr('download', $(this).find('object').attr('data')); 
 		});		
 </script>
 </html>
