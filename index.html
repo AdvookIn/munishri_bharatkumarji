@@ -85,11 +85,9 @@
     </script>
 </body>
 <script>
-	        $(function() {
-		$('.pop').on('click', function() {
+		$('#table-container').on('click', ".pop", function() {
 			$('#imagemodal').modal('show');
 		        $('.imagepreview').attr('src', $(this).find('img').attr('src'));   
 		});		
-});
 </script>
 </html>
