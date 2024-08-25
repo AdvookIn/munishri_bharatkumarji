@@ -67,7 +67,7 @@
     <script>
         function format_link(link) {
             if (link)
-				if(link.substr(link.length - 4) = ".pdf")
+				if(link.substr(link.length - 4) == ".pdf")
 					return "<a href='#' class='pop'>PDF</a>";
 				else return "<a href='#' class='pop'><object data='" + link + "' width='40' height='40' class='img-responsive' ></object></a>";
             else return "";
