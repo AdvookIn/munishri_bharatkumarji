@@ -1,5 +1,8 @@
-Title,Additional Details,Image
-Muni Shri Bharatkumarji,Photo of Muni Shri Bharatkumarji,https://raw.githubusercontent.com/AdvookIn/munishri_bharatkumarji/c100c82c8c19c4513ef96e8f0c919a0a7a0da92f/data/images/munishribharatkumarji2.png
-Muni Shri Bharatkumarji,Another Photo of Muni Shri Bharatkumarji,https://raw.githubusercontent.com/AdvookIn/munishri_bharatkumarji/c100c82c8c19c4513ef96e8f0c919a0a7a0da92f/data/images/munishribharatkumarji1.png
-Test PDF,Test PDF,https://cag.gov.in/uploads/media/Maximum-use-of-Translation-Kanthasth-tool-2-0-063b56237b50050-36763670.pdf
-MST,MST,./data/images/munishribharatkumarji1.png
+Title,Additional Details,File
+Muni Shri Bharatkumarji,Photo of Muni Shri Bharatkumarji,https://raw.githubusercontent.com/AdvookIn/munishri_bharatkumarji/c100c82c8c19c4513ef96e8f0c919a0a7a0da92f/data/images/munishribharatkumarji1.png
+Muni Shri Bharatkumarji,Another Photo of Muni Shri Bharatkumarji,https://raw.githubusercontent.com/AdvookIn/munishri_bharatkumarji/c100c82c8c19c4513ef96e8f0c919a0a7a0da92f/data/images/munishribharatkumarji2.png
+PDF,PDF File,https://cag.gov.in/uploads/media/Maximum-use-of-Translation-Kanthasth-tool-2-0-063b56237b50050-36763670.pdf
+Image,Image File,./data/images/munishribharatkumarji1.png
+PDF,PDF File,./data/images/Terapanth Nagpur Kishore Details.pdf
+Audio,Audio,./data/images/audio.m4a
+Video,Video,./data/images/video.mp4
