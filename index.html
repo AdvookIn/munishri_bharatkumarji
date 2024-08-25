@@ -33,7 +33,9 @@
       </div> 
       <div class="modal-footer">
           <div class="col-xs-12">
-               
+               <a href="" class="btn btn-primary imgdownload" download> 
+    Download
+</a>
           </div>
 
       </div>   
@@ -87,7 +89,8 @@
 <script>
 		$('#table-container').on('click', ".pop", function() {
 			$('#imagemodal').modal('show');
-		        $('.imagepreview').attr('src', $(this).find('img').attr('src'));   
+		        $('.imagepreview').attr('src', $(this).find('img').attr('src')); 
+			$('.imgdownload').attr('href', $(this).find('img').attr('src')); 
 		});		
 </script>
 </html>
