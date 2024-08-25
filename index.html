@@ -38,7 +38,7 @@
         <img src="" class="imagepreview" style="width: 100%;" >
       </div>
       <div class="modal-footer">
-	    <a href="" class="btn btn-primary imgdownload" download="">Download</a>
+	    <a href="" class="btn btn-primary imgdownload" target="_blank" download="">Download</a>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -68,7 +68,7 @@
         function format_link(link) {
             if (link)
 				if(link.substr(link.length - 4) == ".pdf")
-					return "<a href='#' class=''>PDF</a>";
+					return "<a href='" + link + "' target='_blank' class=''>PDF</a>";
 				else return "<a href='#' class='pop'><object data='" + link + "' width='40' height='40' class='img-responsive' ></object></a>";
             else return "";
         }
