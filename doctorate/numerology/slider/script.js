@@ -1,34 +1,51 @@
-/*
-  3d Carousel with set-width carousel.
- It's just 3 different views of the carousel.
- The side items have rotation with transition-origin on their respective edge
- And everything is wrapped by a perspective wrapper
-  For set-width images with auto-width carousel check:
-  **link**
-*/
-// width - padding = min
-// padding = max
-const padding = 200;
-const slidesCount = 5 - 1;
-function map(x, in_min, in_max, out_min, out_max)
-    {
-        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-    }
-document.addEventListener('mousemove', (e)=>{
-  // Change to bodywidth
-  const wrapper = document.getElementById('wrapper')
-  const rect = wrapper.getBoundingClientRect();
-  // Mouse position in between padding
-  const mouseX = Math.min(Math.max(e.clientX - padding,0),rect.width - padding * 2);
-  const rawPercent = map(mouseX, 0, rect.width - padding * 2, 100 - 100 * slidesCount, 100);
-  const percent = Math.round(rawPercent)
-  const left = document.getElementById('left');
-  const center = document.getElementById('center');
-  const right = document.getElementById('right');
-  left.style.transform = `translateX(${percent}%)`;
-  center.style.transform = `translateX(${percent - 100}%)`;
-  right.style.transform = `translateX(${percent - 200}%)`;
-  //debug
-  const paragraph = document.getElementById('t');
-  paragraph.innerHTML = percent;
-})
+document.addEventListener("DOMContentLoaded", function () {
+  let carousel = document.querySelector(".carousel");
+  let items = carousel.querySelectorAll(".item");
+  let dotsContainer = document.querySelector(".dots");
+
+  // Insert dots into the DOM
+  items.forEach((_, index) => {
+    let dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+  });
+
+  let dots = document.querySelectorAll(".dot");
+
+  // Function to show a specific item
+  function showItem(index) {
+    items.forEach((item, idx) => {
+      item.classList.remove("active");
+      dots[idx].classList.remove("active");
+      if (idx === index) {
+        item.classList.add("active");
+        dots[idx].classList.add("active");
+      }
+    });
+  }
+
+  // Event listeners for buttons
+  document.querySelector(".prev").addEventListener("click", () => {
+    let index = [...items].findIndex((item) =>
+      item.classList.contains("active")
+    );
+    showItem((index - 1 + items.length) % items.length);
+  });
+
+  document.querySelector(".next").addEventListener("click", () => {
+    let index = [...items].findIndex((item) =>
+      item.classList.contains("active")
+    );
+    showItem((index + 1) % items.length);
+  });
+
+  // Event listeners for dots
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      let index = parseInt(dot.dataset.index);
+      showItem(index);
+    });
+  });
+});
